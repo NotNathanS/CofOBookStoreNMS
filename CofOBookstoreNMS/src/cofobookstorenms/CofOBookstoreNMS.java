@@ -292,14 +292,40 @@ public class CofOBookstoreNMS {
         //if author or title is valid return book else return invalid author name
         String bookAuthor;
         String bookTitle;
-        Book searchBook = new Book();
+        ArrayList<Book> searchResult;
 
         System.out.print("Enter the author or title of a book: ");
-        bookAuthor = input.nextLine();
-        bookTitle = input.nextLine();
+        String search = input.nextLine();
 
 
     }
+    /*    String bookAuthor;
+    String bookTitle;
+    ArrayList<Book> searchResults;
+
+    System.out.print("Enter the author or title of a book: ");
+    String searchTerm = input.nextLine();
+
+    if (ds.connectDB()) {
+        searchResults = ds.searchBooks(searchTerm);
+        ds.disConnectDB();
+
+        if (!searchResults.isEmpty()) {
+            System.out.println("Search Results:");
+            for (int i = 0; i < searchResults.size(); i++) {
+                System.out.println("Title: " + searchResults.get(i).getTitle());
+                System.out.println("Author: "
+                        + searchResults.get(i).getAuthor()
+                        + " Price: "
+                        + searchResults.get(i).getPrice()
+                        + " ISBN: " + searchResults.get(i).getISBN());
+                System.out.println();
+            }
+        } else {
+            System.out.println("No books found matching the search term: " + searchTerm);
+        }
+    }
+    }*/
     private static void viewShoppingCart() {
         System.out.println("In viewShoppingCart");
     }

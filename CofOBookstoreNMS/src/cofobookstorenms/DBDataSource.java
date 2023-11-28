@@ -176,5 +176,28 @@ public class DBDataSource {
 
         return books;
     }
+    /*public ArrayList<Book> searchBooks(String searchTerm) {
+    ArrayList<Book> searchResults = new ArrayList<>();
+    try {
+        String query = "SELECT * FROM books WHERE author LIKE ? OR title LIKE ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, "%" + searchTerm + "%"); // for author
+        preparedStatement.setString(2, "%" + searchTerm + "%"); // for title
 
+        ResultSet resultSet = preparedStatement.executeQuery();
+
+        while (resultSet.next()) {
+            // Assuming you have a constructor in the Book class to initialize a Book object from the ResultSet
+            Book book = new Book(resultSet.getString("title"), resultSet.getString("author"), resultSet.getDouble("price"), resultSet.getString("ISBN"));
+            searchResults.add(book);
+        }
+
+        resultSet.close();
+        preparedStatement.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+
+    return searchResults;
+}*/
 }
